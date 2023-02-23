@@ -1,0 +1,50 @@
+package br.com.alura;
+
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Set;
+
+//adicionales utilizando interface Set
+public class Clase13 {
+
+	public static void main(String[] args) {
+		String alumno1 = "Luis Miguel";
+		String alumno2 = "Pepito los palotes";
+		String alumno3 = "Juan Carlos";
+		String alumno4 = "Pedro Pedrito";
+		String alumno5 = "Gustavo Sanchez";
+		String alumno6 = "Marcia Maria";
+		String alumno7 = "Gustavo Sanchez"; //set no guarda objetos duplicados
+		String alumno8 = "Marcia Maria";
+		
+		Set<String>listaAlumnos = new HashSet<>();
+		
+		listaAlumnos.add(alumno1);
+		listaAlumnos.add(alumno2);
+		listaAlumnos.add(alumno3);
+		listaAlumnos.add(alumno4);
+		listaAlumnos.add(alumno5);
+		listaAlumnos.add(alumno6);
+		listaAlumnos.add(alumno7);
+		listaAlumnos.add(alumno8);
+		
+		
+		// existe el String
+		boolean valida = listaAlumnos.contains("Pedro Pedrito");
+		System.out.println(valida);
+		
+		//long
+		String max = listaAlumnos.stream().max(Comparator.comparingInt(String::length)).get();
+		System.out.println(max);
+		
+		//cuantos caracteres tiene
+		System.out.println(max.length());
+		
+		//remueve
+		listaAlumnos.removeIf(alumno->"Pedro Pedrito".equalsIgnoreCase(alumno));
+		
+		listaAlumnos.forEach(alumno ->{
+		System.out.println(alumno);
+		});
+	}
+}
