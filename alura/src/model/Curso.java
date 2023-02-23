@@ -1,4 +1,5 @@
-package br.com.alura;
+package model;
+
 
 public class Curso implements Comparable<Curso>{
 
@@ -10,6 +11,7 @@ public class Curso implements Comparable<Curso>{
 		this.nombre = nombre;
 		this.tiempo = tiempo;
 	}
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -22,7 +24,8 @@ public class Curso implements Comparable<Curso>{
 	public void setTiempo(int tiempo) {
 		this.tiempo = tiempo;
 	}
-	
+
+
 	@Override
 	public String toString() {
 		return this.nombre;

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+import model.Curso;
+
 public class Clase5 {
 
 	public static void main(String[] args) {

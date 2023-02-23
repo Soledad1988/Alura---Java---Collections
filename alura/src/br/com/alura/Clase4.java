@@ -2,6 +2,8 @@ package br.com.alura;
 
 import java.util.ArrayList;
 
+import model.Curso;
+
 //lista de Objetos
 public class Clase4 {
 
